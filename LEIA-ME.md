@@ -1,48 +1,51 @@
-# Blog da Crescix 🌱
+# Blog da CrescIX 🌱
 
-Blog estático da Crescix — sem precisar de servidor, banco de dados nem programação avançada. Basta abrir o `index.html` no navegador.
+Blog oficial da CrescIX, feito em **Next.js** com a mesma identidade visual do [crescix.com.br](https://crescix.com.br). Hospedado na **Vercel** com deploy automático: todo push no branch `main` entra no ar sozinho em **blog.crescix.com.br**.
 
-## Estrutura das pastas
+## Como adicionar um post novo (o mais importante!)
+
+Os posts são arquivos **Markdown** na pasta `content/posts`. Não precisa mexer em código.
+
+1. **Copie** o arquivo `content/posts/_modelo.md` e renomeie seguindo o padrão
+   `ANO-MES-DIA-titulo-curto.md` (ex.: `2026-07-25-novo-projeto.md`).
+2. **Preencha o cabeçalho** (entre os `---` no topo): `titulo`, `data` (formato
+   `2026-07-25`), `categoria` e `resumo`.
+3. **Escreva o post** em Markdown: texto normal, `**negrito**`, `## subtítulos`,
+   listas com `-`, citações com `>`, imagens etc.
+4. **Envie pro GitHub** (commit + push no `main`). A Vercel publica sozinha em
+   ~1 minuto.
+
+Os posts aparecem na página inicial do mais novo para o mais antigo (pela `data`).
+
+## Estrutura do projeto
 
 ```
 crescix-blog/
-├── index.html          → Página inicial (lista os posts automaticamente)
-├── sobre.html          → Página "Sobre a Crescix" (edite com a sua história)
-├── LEIA-ME.md          → Este arquivo
-├── css/style.css       → Cores e visual do blog
-├── js/posts.js         → LISTA DE POSTS (é aqui que você cadastra post novo)
-├── posts/              → Um arquivo HTML por post
-│   ├── _modelo.html    → Modelo para copiar (não apague!)
-│   └── 2026-07-20-bem-vindos.html
-└── imagens/            → Coloque aqui as fotos usadas nos posts
+├── content/posts/       → OS POSTS (arquivos .md — é aqui que você escreve)
+│   └── _modelo.md       → Modelo para copiar (não apague!)
+├── public/imagens/      → Fotos usadas nos posts
+├── public/logo.png      → Logo da navegação
+├── app/
+│   ├── icon.png         → Favicon (mesmo do site principal)
+│   ├── globals.css      → Cores e visual (tokens do crescix.com.br)
+│   ├── layout.js        → Navegação e rodapé
+│   ├── page.js          → Página inicial
+│   ├── sobre/           → Página "Sobre"
+│   └── posts/[slug]/    → Página de cada post
+└── lib/posts.js         → Leitura dos arquivos Markdown
 ```
 
-## Como adicionar um post novo (3 passos)
+## Rodar localmente (opcional)
 
-1. **Copie** o arquivo `posts/_modelo.html` e renomeie seguindo o padrão
-   `ANO-MES-DIA-titulo-curto.html` (ex.: `2026-07-25-novo-projeto.html`).
-2. **Escreva** o conteúdo dentro do arquivo: troque o título, a data, a
-   categoria e os parágrafos.
-3. **Cadastre** o post em `js/posts.js`: copie um bloco `{ ... },` existente,
-   cole **no topo** da lista `POSTS` e atualize título, data, categoria,
-   resumo e o nome do arquivo.
+Precisa do Node.js instalado:
 
-Pronto! O post aparece automaticamente na página inicial.
+```bash
+npm install   # só na primeira vez
+npm run dev   # abre em http://localhost:3000
+```
 
-## Como mudar as cores
+## Identidade visual
 
-Abra `css/style.css` — as cores principais estão logo no começo, na seção
-`:root`. Troque os códigos (ex.: `--verde: #16a34a;`) pelos da identidade
-visual da Crescix.
-
-## Como publicar na internet (de graça)
-
-Algumas opções gratuitas:
-
-- **Netlify** (mais fácil): acesse [netlify.com/drop](https://app.netlify.com/drop)
-  e arraste a pasta `crescix-blog` inteira. Pronto, o blog fica no ar.
-- **GitHub Pages**: crie um repositório no GitHub, envie os arquivos e ative
-  o Pages nas configurações.
-- **Vercel**: parecido com o Netlify, em [vercel.com](https://vercel.com).
-
-Depois dá para conectar um domínio próprio (ex.: `blog.crescix.com.br`).
+As cores vêm do site principal e ficam no `:root` do `app/globals.css`:
+fundo `#0b1622`, cards `#172a3a`, verde CrescIX `#22c55e`, fontes
+Plus Jakarta Sans (títulos) e DM Sans (texto).
