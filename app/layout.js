@@ -52,10 +52,10 @@ export default function RootLayout({ children }) {
               <span className="blog-tag">Blog</span>
             </Link>
             <div className="nav-links">
-              <Link href="/">Início</Link>
-              <Link href="/sobre" className="esconde-mobile">
-                Sobre
+              <Link href="/" className="esconde-mobile">
+                Início
               </Link>
+              <Link href="/sobre">Sobre</Link>
               <a href="https://crescix.com.br" className="cta">
                 Conheça a CrescIX
               </a>
