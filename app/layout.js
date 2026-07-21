@@ -31,8 +31,8 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#0b1622",
-  colorScheme: "dark",
+  themeColor: "#001c37",
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }) {
@@ -42,10 +42,13 @@ export default function RootLayout({ children }) {
         <nav className="nav">
           <div className="nav-inner">
             <Link href="/" className="logo">
-              <Image src="/logo.png" alt="Logo da CrescIX" width={28} height={28} />
-              <span>
-                Cresc<span className="ix">IX</span>
-              </span>
+              <Image
+                src="/logo.png"
+                alt="CresciX"
+                width={120}
+                height={45}
+                priority
+              />
               <span className="blog-tag">Blog</span>
             </Link>
             <div className="nav-links">
