@@ -6,13 +6,13 @@ resumo: "Um resumo curto de uma ou duas frases que aparece no card da página in
 ---
 
 <!--
-  MODELO DE POST — NÃO APAGUE ESTE ARQUIVO!
+  MODELO DE POST (NÃO APAGUE ESTE ARQUIVO!)
   Para criar um post novo:
     1. Copie este arquivo e renomeie, ex.: 2026-07-25-meu-post.md
        (arquivos que começam com _ são ignorados pelo blog)
     2. Preencha o cabeçalho acima (titulo, data no formato ANO-MES-DIA,
        categoria e resumo)
-    3. Escreva o post abaixo usando Markdown — salve e envie pro GitHub.
+    3. Escreva o post abaixo usando Markdown, salve e envie pro GitHub.
        Pronto, o post entra no ar sozinho!
 -->
 

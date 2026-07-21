@@ -17,7 +17,7 @@ export default function Sobre() {
           <p>
             A <strong>CrescIX</strong> transforma áudios e mensagens do Telegram
             em controle financeiro real. Cadastre vendas, despesas e compras
-            conversando — sem planilha, sem complicação.
+            conversando, sem planilha e sem complicação.
           </p>
           <p>
             Este blog é o nosso diário de bordo: aqui registramos projetos,

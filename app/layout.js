@@ -19,7 +19,7 @@ export const metadata = {
   metadataBase: new URL("https://blog.crescix.com.br"),
   title: {
     default: "Blog da CrescIX",
-    template: "%s — Blog da CrescIX",
+    template: "%s | Blog da CrescIX",
   },
   description:
     "O diário de bordo da CrescIX: projetos, bastidores, aprendizados e novidades da gestão financeira no automático pra pequenos negócios.",
@@ -70,10 +70,10 @@ export default function RootLayout({ children }) {
             <span className="logo-footer">
               Cresc<span className="ix">IX</span>
             </span>{" "}
-            &copy; {new Date().getFullYear()} — Todos os direitos reservados.
+            &copy; {new Date().getFullYear()}. Todos os direitos reservados.
           </p>
           <p>
-            Gestão financeira no automático pra pequenos negócios —{" "}
+            Gestão financeira no automático pra pequenos negócios &middot;{" "}
             <a href="https://crescix.com.br">crescix.com.br</a>
           </p>
         </footer>

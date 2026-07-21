@@ -21,7 +21,7 @@ Os posts aparecem na página inicial do mais novo para o mais antigo (pela `data
 
 ```
 crescix-blog/
-├── content/posts/       → OS POSTS (arquivos .md — é aqui que você escreve)
+├── content/posts/       → OS POSTS (arquivos .md, é aqui que você escreve)
 │   └── _modelo.md       → Modelo para copiar (não apague!)
 ├── public/imagens/      → Fotos usadas nos posts
 ├── public/logo.png      → Logo da navegação
