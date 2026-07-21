@@ -1,4 +1,4 @@
-# Blog da CrescIX 🌱
+# Blog CrescIX 🌱
 
 Blog oficial da CrescIX, feito em **Next.js** com a mesma identidade visual do [crescix.com.br](https://crescix.com.br). Hospedado na **Vercel** com deploy automático: todo push no branch `main` entra no ar sozinho em **blog.crescix.com.br**.
 

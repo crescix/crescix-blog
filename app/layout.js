@@ -18,15 +18,15 @@ const dmSans = DM_Sans({
 export const metadata = {
   metadataBase: new URL("https://blog.crescix.com.br"),
   title: {
-    default: "Blog da CrescIX",
-    template: "%s | Blog da CrescIX",
+    default: "Blog CrescIX",
+    template: "%s | Blog CrescIX",
   },
   description:
     "O diário de bordo da CrescIX: projetos, bastidores, aprendizados e novidades da gestão financeira no automático pra pequenos negócios.",
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    siteName: "Blog da CrescIX",
+    siteName: "Blog CrescIX",
   },
 };
 
