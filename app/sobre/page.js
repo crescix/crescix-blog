@@ -1,7 +1,21 @@
 export const metadata = {
-  title: "Sobre",
+  title: "Sobre a CrescIX",
   description:
     "A CrescIX é uma startup brasileira que constrói soluções tecnológicas pra pequenos e médios negócios. Faz parte do Inatel Startups, em Santa Rita do Sapucaí, MG.",
+  alternates: { canonical: "/sobre" },
+  openGraph: {
+    type: "profile",
+    url: "https://blog.crescix.com.br/sobre",
+    title: "Sobre a CrescIX",
+    description:
+      "Startup brasileira que constrói tecnologia pra pequenos e médios negócios. Bot financeiro por IA, ERP pra mercados e assistente de atendimento no WhatsApp.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sobre a CrescIX",
+    description:
+      "Startup brasileira que constrói tecnologia pra pequenos e médios negócios.",
+  },
 };
 
 export default function Sobre() {
