@@ -13,7 +13,24 @@
   --primary: #22c55e;
   --primary-dark: #16a34a;
   --primary-foreground: #001c37;
+  /* Accents: cyan pra momentos "tech/IA", amber pra "novidade/lançamento". */
+  --cyan: #06b6d4;
+  --cyan-light: #22d3ee;
+  --amber: #d97706;
+  --amber-light: #f59e0b;
   --radius: 0.75rem;
+}
+
+::selection {
+  background: rgba(34, 197, 94, 0.3);
+  color: var(--navy);
+}
+
+/* Focus ring consistente pra navegação por teclado */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 * {
@@ -125,14 +142,16 @@ img {
   color: #ffffff;
 }
 
+/* Mesh gradient: verde + cyan sutil, sobre o navy do hero */
 .hero::before {
   content: "";
   position: absolute;
   inset: -40% -20% auto;
   height: 140%;
   background:
-    radial-gradient(600px 300px at 30% 20%, rgba(34, 197, 94, 0.16), transparent 70%),
-    radial-gradient(500px 260px at 75% 10%, rgba(34, 197, 94, 0.09), transparent 70%);
+    radial-gradient(600px 300px at 30% 20%, rgba(34, 197, 94, 0.18), transparent 70%),
+    radial-gradient(500px 260px at 75% 10%, rgba(34, 197, 94, 0.09), transparent 70%),
+    radial-gradient(400px 240px at 60% 60%, rgba(34, 211, 238, 0.10), transparent 70%);
   pointer-events: none;
 }
 
@@ -216,7 +235,23 @@ img {
 .card:hover {
   transform: translateY(-4px);
   border-color: rgba(34, 197, 94, 0.55);
-  box-shadow: 0 14px 34px rgba(0, 28, 55, 0.12);
+  box-shadow:
+    0 14px 34px rgba(0, 28, 55, 0.12),
+    0 0 0 4px rgba(34, 197, 94, 0.08);
+}
+
+.card.accent-cyan:hover {
+  border-color: rgba(34, 211, 238, 0.55);
+  box-shadow:
+    0 14px 34px rgba(0, 28, 55, 0.12),
+    0 0 0 4px rgba(34, 211, 238, 0.10);
+}
+
+.card.accent-amber:hover {
+  border-color: rgba(245, 158, 11, 0.55);
+  box-shadow:
+    0 14px 34px rgba(0, 28, 55, 0.12),
+    0 0 0 4px rgba(245, 158, 11, 0.10);
 }
 
 .card .categoria {
@@ -231,6 +266,37 @@ img {
   padding: 0.22rem 0.65rem;
   border-radius: 999px;
   margin-bottom: 0.9rem;
+}
+
+.card.accent-cyan .categoria,
+.post-header.accent-cyan .categoria {
+  color: var(--cyan);
+  background: rgba(34, 211, 238, 0.1);
+  border-color: rgba(34, 211, 238, 0.35);
+}
+
+.card.accent-amber .categoria,
+.post-header.accent-amber .categoria {
+  color: var(--amber);
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.card .meta-linha {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--muted-foreground);
+  margin-bottom: 0.7rem;
+}
+
+.card .meta-linha .dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--muted-foreground);
+  opacity: 0.55;
 }
 
 .card h2 {
@@ -260,10 +326,26 @@ img {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--primary-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
-.card:hover .leia-mais {
-  text-decoration: underline;
+.card .leia-mais .arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .leia-mais .arrow {
+  transform: translateX(4px);
+}
+
+.card.accent-cyan .leia-mais {
+  color: var(--cyan);
+}
+
+.card.accent-amber .leia-mais {
+  color: var(--amber);
 }
 
 /* ===== Página de post ===== */
@@ -282,6 +364,15 @@ img {
   font-weight: 600;
   color: var(--primary-dark);
   margin-bottom: 2rem;
+}
+
+.voltar .arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.voltar:hover .arrow {
+  transform: translateX(-4px);
 }
 
 .voltar:hover {
@@ -318,6 +409,18 @@ img {
   padding-bottom: 1.6rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.post-header .meta .dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--muted-foreground);
+  opacity: 0.55;
 }
 
 /* Conteúdo vindo do Markdown */
@@ -554,5 +657,26 @@ footer a:hover {
 
   .logo img {
     width: 84px;
+  }
+}
+
+/* Respeita usuários que pediram menos movimento (a11y + bateria) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card:hover .leia-mais .arrow,
+  .voltar:hover .arrow {
+    transform: none;
   }
 }

@@ -22,14 +22,18 @@ export default async function PostPage({ params }) {
   return (
     <main className="post-container">
       <Link href="/" className="voltar">
-        &larr; Voltar para o início
+        <span className="arrow" aria-hidden="true">&larr;</span> Voltar para o início
       </Link>
 
       <article>
-        <header className="post-header">
+        <header className={`post-header accent-${post.accent}`}>
           <span className="categoria">{post.categoria}</span>
           <h1>{post.titulo}</h1>
-          <p className="meta">Publicado em {formatarData(post.data)}</p>
+          <p className="meta">
+            <span>Publicado em {formatarData(post.data)}</span>
+            <span className="dot" aria-hidden="true" />
+            <span>{post.minutosLeitura} min de leitura</span>
+          </p>
         </header>
 
         <div

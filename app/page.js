@@ -24,12 +24,22 @@ export default function Home() {
         ) : (
           <div className="grid">
             {posts.map((post) => (
-              <Link key={post.slug} href={`/posts/${post.slug}`} className="card">
+              <Link
+                key={post.slug}
+                href={`/posts/${post.slug}`}
+                className={`card accent-${post.accent}`}
+              >
                 <span className="categoria">{post.categoria}</span>
                 <h2>{post.titulo}</h2>
-                <p className="data">{formatarData(post.data)}</p>
+                <p className="meta-linha">
+                  <span>{formatarData(post.data)}</span>
+                  <span className="dot" aria-hidden="true" />
+                  <span>{post.minutosLeitura} min de leitura</span>
+                </p>
                 <p className="resumo">{post.resumo}</p>
-                <span className="leia-mais">Ler post completo &rarr;</span>
+                <span className="leia-mais">
+                  Ler post completo <span className="arrow" aria-hidden="true">&rarr;</span>
+                </span>
               </Link>
             ))}
           </div>
