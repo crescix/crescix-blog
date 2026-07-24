@@ -43,4 +43,4 @@ A gente construiu pensando em quem sofre com volume grande de mensagem misturada
 
 Estamos rodando o assistente em atendimentos reais pra ajustar o jeito de conversar, os limites do que o bot resolve sozinho e o que vira uma passagem elegante pra recepção humana. Nas próximas semanas a gente vai contar aqui os aprendizados: o que a IA acerta de primeira, o que ela ainda precisa aprender e como a gente mede o quanto a agenda ficou mais organizada depois que o assistente entrou.
 
-Se você tem uma clínica, academia, laboratório ou qualquer negócio que vive de agendamento e quer participar dos testes, dá uma olhada em **[crescix.com.br/atendimento](https://crescix.com.br/atendimento)** e fala com a gente. 🤖
+Se você tem uma clínica, academia, laboratório ou qualquer negócio que vive de agendamento, dá uma olhada em **[crescix.com.br/atendimento](https://crescix.com.br/atendimento)** e fala com a gente. Temos 14 dias grátis pra você experimentar com a cara do seu negócio. 🤖

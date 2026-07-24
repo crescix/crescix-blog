@@ -40,6 +40,6 @@ Pensa numa venda comum:
 
 Estamos afinando o produto com donos de mercado reais, ajustando fluxo de caixa, cadastro de fornecedores e relatórios que fazem sentido pra quem vive o balcão. Nas próximas semanas a gente volta aqui pra contar sobre integrações fiscais, controle de validade e o piloto no primeiro mercado.
 
-Se você toca um mercado ou minimercado e quer participar dos testes, fala com a gente em **[crescix.com.br/erp](https://crescix.com.br/erp)**. A ideia é lançar já resolvendo dor real, não em versão beta genérica.
+Se você toca um mercado ou minimercado e quer conhecer o produto de perto, dá uma olhada em **[crescix.com.br/erp](https://crescix.com.br/erp)** e fala com a gente. A ideia é lançar já resolvendo dor real, não em versão beta genérica.
 
 Acompanha por aqui, o produto tá crescendo rápido. 🛒
