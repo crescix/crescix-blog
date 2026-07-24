@@ -18,7 +18,7 @@ const dmSans = DM_Sans({
 export const metadata = {
   metadataBase: new URL("https://blog.crescix.com.br"),
   title: {
-    default: "Blog CrescIX | Bastidores da startup de tecnologia pra pequenos negócios",
+    default: "Blog CrescIX | Bastidores da tecnologia pra PMEs",
     template: "%s | Blog CrescIX",
   },
   description:

@@ -1,5 +1,6 @@
 ---
 titulo: "Estamos construindo um ERP feito pra mercados de bairro"
+tituloSEO: "ERP CrescIX pra mercados de bairro em construção"
 data: "2026-07-23"
 categoria: "Novidade"
 resumo: "PDV no teclado, NFC-e, estoque que bate, pesagem por etiqueta de balança e crediário organizado. O ERP da CrescIX pro varejo está tomando forma e a gente vai contar como."

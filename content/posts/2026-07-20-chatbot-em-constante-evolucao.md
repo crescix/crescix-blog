@@ -1,5 +1,6 @@
 ---
 titulo: "Nosso chatbot está pronto para testes e evoluindo a cada semana"
+tituloSEO: "Chatbot financeiro CrescIX pronto pra testes"
 data: "2026-07-20"
 categoria: "Produto"
 resumo: "O chatbot da CrescIX já está funcionando e aberto para testes: gestão financeira conversando pelo Telegram, com atualizações constantes baseadas no feedback de quem usa."

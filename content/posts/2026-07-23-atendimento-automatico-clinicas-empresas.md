@@ -1,5 +1,6 @@
 ---
 titulo: "Um assistente de IA que atende WhatsApp de clínicas e empresas 24 horas por dia"
+tituloSEO: "Assistente de IA no WhatsApp pra clínicas e empresas"
 data: "2026-07-23"
 categoria: "IA"
 resumo: "Um bot que recebe o cliente na madrugada, direciona pro setor certo, agenda direto no Google Agenda e nunca marca dois no mesmo horário. É o segundo produto da CrescIX e ele já está atendendo de verdade."

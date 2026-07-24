@@ -12,15 +12,16 @@ export async function generateMetadata({ params }) {
   const post = await getPost(slug);
   const url = `${BASE}/posts/${slug}`;
   const publishedTime = new Date(post.data).toISOString();
+  const tituloCurto = post.tituloSEO || post.titulo;
 
   return {
-    title: post.titulo,
+    title: tituloCurto,
     description: post.resumo,
     alternates: { canonical: `/posts/${slug}` },
     openGraph: {
       type: "article",
       url,
-      title: post.titulo,
+      title: tituloCurto,
       description: post.resumo,
       siteName: "Blog CrescIX",
       locale: "pt_BR",
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: "summary_large_image",
-      title: post.titulo,
+      title: tituloCurto,
       description: post.resumo,
     },
   };
