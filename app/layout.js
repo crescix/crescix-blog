@@ -89,8 +89,10 @@ const organizationSchema = {
     "Startup brasileira que constrói soluções tecnológicas pra pequenos e médios negócios. Faz parte do Inatel Startups, em Santa Rita do Sapucaí, MG.",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Av. João de Camargo, 510",
     addressLocality: "Santa Rita do Sapucaí",
     addressRegion: "MG",
+    postalCode: "37540-000",
     addressCountry: "BR",
   },
   sameAs: [
