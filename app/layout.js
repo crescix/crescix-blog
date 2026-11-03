@@ -1,6 +1,7 @@
 import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
+import { EMPRESA, identificacaoFornecedor, pendente } from "../lib/empresa";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -135,7 +136,7 @@ export default function RootLayout({ children }) {
             <Link href="/" className="logo">
               <Image
                 src="/logo.png"
-                alt="CresciX"
+                alt="CrescIX"
                 width={120}
                 height={45}
                 priority
@@ -166,6 +167,43 @@ export default function RootLayout({ children }) {
           <p>
             Gestão financeira no automático pra pequenos negócios &middot;{" "}
             <a href="https://crescix.com.br">crescix.com.br</a>
+          </p>
+
+          {/* Documentos legais: moram no site principal, pra não existir
+              uma quarta cópia divergindo das outras três. */}
+          <nav className="rodape-legal" aria-label="Documentos legais">
+            <a href={`${EMPRESA.site}/privacidade`}>Política de Privacidade</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href={`${EMPRESA.site}/termos`}>Termos de uso</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href={`${EMPRESA.site}/cookies`}>Política de Cookies</a>
+          </nav>
+
+          {/* Identificação do responsável pelo conteúdo publicado. */}
+          <p className="rodape-identificacao">
+            {EMPRESA.nomeFantasia} &middot; {identificacaoFornecedor()}
+            <br />
+            {EMPRESA.endereco}
+            <br />
+            <a href={`mailto:${EMPRESA.emailContato}`}>
+              {EMPRESA.emailContato}
+            </a>{" "}
+            &middot; Encarregado de dados:{" "}
+            <a href={`mailto:${EMPRESA.emailDpo}`}>{EMPRESA.emailDpo}</a>
+          </p>
+
+          {(pendente(EMPRESA.responsavel) ||
+            pendente(EMPRESA.cpf) ||
+            pendente(EMPRESA.endereco)) && (
+            <p className="rodape-pendencia">
+              Identificação pendente de preenchimento em{" "}
+              <code>lib/empresa.js</code> antes do próximo deploy.
+            </p>
+          )}
+
+          <p className="rodape-cookies">
+            Este blog não grava cookies e não usa analytics nem pixel de
+            anúncio.
           </p>
         </footer>
       </body>

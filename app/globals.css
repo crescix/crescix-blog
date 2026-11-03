@@ -567,6 +567,43 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* Bloco legal do rodapé: links das políticas (que moram no site
+   principal), identificação do responsável e nota sobre cookies. */
+
+footer .rodape-legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+footer .rodape-legal span {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+footer .rodape-identificacao,
+footer .rodape-cookies {
+  margin-top: 0.9rem;
+  font-size: 0.8rem;
+  /* 0.72 de branco sobre o navy fica acima de 4,5:1; não baixe daqui. */
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
+}
+
+footer .rodape-pendencia {
+  margin-top: 0.9rem;
+  font-size: 0.8rem;
+  color: #fbbf24;
+}
+
+footer .rodape-pendencia code {
+  font-family: var(--font-mono, monospace);
+}
+
 /* ===== Responsivo ===== */
 
 @media (max-width: 900px) {
